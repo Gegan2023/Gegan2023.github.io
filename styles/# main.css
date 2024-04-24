@@ -1,27 +1,33 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  h1 {
-    color: #f30303;
-    font-size: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 1px solid #4d9737;
-  }
-  
-  h2 {
-    font-size: 1.5em;
-  }
-  
-  .job-title {
-    color: #f00000;
-    font-weight: bold;
-  }
-  
-  a:link, a:visited {
-    color: #1a5e31;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #f30303;
+  font-size: 2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: 1px solid color(srgb red green blue);
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.job-title {
+  color: #f00000;
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: #1a5e31;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+img:hover {
+  opacity: 0.7; 
+}
