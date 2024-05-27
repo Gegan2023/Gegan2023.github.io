@@ -1,32 +1,19 @@
-console.log("task one");
+let cssColors = ["Aqua", "Black", "Blue", "Fuchsia", "Gray", "Green", "Lime", "Maroon", "Navy", "Olive", "Purple", "Red", "Silver", "Teal", "White", "Yellow"];
+let selectedColors = [];
 
-for (let i = 1; i <= 10; i++) {
-    console.log(i * i);
+for(let i=0; i<7; i++){
+    let index = Math.floor(Math.random() * cssColors.length);
+    selectedColors.push(cssColors[index]);
+    cssColors.splice(index, 1);
 }
 
-for (let i = 5; i >= 1; i--) {
-    console.log(i);
-}
-console.log("Blastoff!");
+let ulElement = document.createElement('ul');
 
-for (let i = 2; i <= 50; i += 2) {
-    console.log(i);
-}
+selectedColors.forEach(color => {
+    let liElement = document.createElement('li');
+    liElement.innerText = color;
+    liElement.style.color = color;
+    ulElement.appendChild(liElement);
+});
 
-let sum = 0;
-for (let i = 1; i <= 100; i++) {
-    sum += i;
-}
-console.log("The sum of numbers from 1 to 100 is:", sum);
-
-function factorial(n) {
-    let result = 1;
-    for (let i = 1; i <= n; i++) {
-        result *= i;
-    }
-    return result;
-}
-
-for (let i = 1; i <= 10; i++) {
-    console.log(i + "! = " + factorial(i));
-}
+document.body.appendChild(ulElement);
